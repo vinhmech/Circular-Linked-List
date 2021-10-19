@@ -105,32 +105,32 @@ public class CircularLinkedList{
     // print size
     void printSize() {
         if (currentSize <= 1) {
-            System.out.print(String.format("\nThe list has %d element", currentSize));
+            System.out.println(String.format("The list has %d element", currentSize));
         }
         else {
-            System.out.print(String.format("\nThe list has %d elements", currentSize));
+            System.out.println(String.format("The list has %d elements", currentSize));
         }
     }
 
     // print current
     void printCurrent() {
         if (currentSize == 0) {
-            System.out.print("\nEmpty List");
+            System.out.println("Empty List");
         }
         else {
-            System.out.print(String.format("\nThe current element is %d", current.data));
+            System.out.println(String.format("The current element is %d", current.data));
         }
     }
 
     // print list
     void printList() {
         if (currentSize == 0) {
-            System.out.print("\nEmpty List");
+            System.out.println("Empty List");
         }
         else {
             System.out.print("\n");
             for (int i = currentSize; i > 0; i--) {
-                System.out.print(String.format("%d ", current.data));
+                System.out.print(String.format("%d-> ", current.data));
                 current = current.next;
             }
         }
