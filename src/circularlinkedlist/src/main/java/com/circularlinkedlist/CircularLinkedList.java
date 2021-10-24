@@ -25,7 +25,7 @@ public class CircularLinkedList{
     }
 
     // insert after current
-    void insertAfterCurrent(int n) {
+    public void insertAfterCurrent(int n) {
         Node p = createNode(n);			// create a node from an integer value n
         if (currentSize == 0) {				// list is empty
             current = p;
@@ -40,7 +40,7 @@ public class CircularLinkedList{
     }
 
     // insert before current
-    void insertBeforeCurrent(int n) {
+    public void insertBeforeCurrent(int n) {
         Node p = createNode(n);			// create a node from an integer value n
         if (currentSize == 0) {				// list is empty
             current = p;
@@ -58,7 +58,7 @@ public class CircularLinkedList{
     }
 
     // search
-    Node search(int n) {
+    public Node search(int n) {
         if (currentSize == 0) {
             return null;
         }
@@ -72,7 +72,7 @@ public class CircularLinkedList{
     }
 
     // update
-    boolean update(int o, int n) {
+    public boolean update(int o, int n) {
         Node nodeToChange = search(o);
         if (nodeToChange == null) {
             return false;
@@ -84,7 +84,7 @@ public class CircularLinkedList{
     }
 
     // delete
-    boolean deleteNode(int n) {
+    public boolean deleteNode(int n) {
         Node nodeToDelete = search(n);
         if (nodeToDelete == null) {
             return false;
@@ -103,7 +103,7 @@ public class CircularLinkedList{
     }
 
     // print size
-    void printSize() {
+    public void printSize() {
         if (currentSize <= 1) {
             System.out.println(String.format("The list has %d element", currentSize));
         }
@@ -113,7 +113,7 @@ public class CircularLinkedList{
     }
 
     // print current
-    void printCurrent() {
+    public void printCurrent() {
         if (currentSize == 0) {
             System.out.println("Empty List");
         }
@@ -123,7 +123,7 @@ public class CircularLinkedList{
     }
 
     // print list
-    void printList() {
+    public void printList() {
         if (currentSize == 0) {
             System.out.println("Empty List");
         }

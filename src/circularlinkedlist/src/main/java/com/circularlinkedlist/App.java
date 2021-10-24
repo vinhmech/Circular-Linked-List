@@ -80,7 +80,7 @@ public class App
         int oldValue = 6;
         System.out.println(String.format("*** Update number %d to %d", oldValue, newValue));
 
-        Boolean updateResult = cll.update(oldValue, newValue);
+        boolean updateResult = cll.update(oldValue, newValue);
 
         if(updateResult == false) {
             System.out.println(String.format("Fail to update, number %d is not found in the list", oldValue));
@@ -100,7 +100,7 @@ public class App
         int oldValue2 = 5;
         System.out.println(String.format("*** Update number %d to %d", oldValue2, newValue2));
 
-        Boolean updateResult2 = cll.update(oldValue2, newValue2);
+        boolean updateResult2 = cll.update(oldValue2, newValue2);
 
         if(updateResult2 == false) {
             System.out.println(String.format("Fail to update, number %d is not found in the list", oldValue2));
@@ -118,7 +118,7 @@ public class App
         System.out.println();
         int deleteNum = 6;
         System.out.println(String.format("*** The number to delete is: %d", deleteNum));
-        Boolean deleteResult = cll.deleteNode(deleteNum);
+        boolean deleteResult = cll.deleteNode(deleteNum);
 
         if(deleteResult == true) {
             System.out.println(String.format("Deleted number %d", deleteNum));
@@ -134,7 +134,7 @@ public class App
         System.out.println();
         int deleteNum2 = 7;
         System.out.println(String.format("*** The number to delete is: %d", deleteNum2));
-        Boolean result2 = cll.deleteNode(deleteNum2);
+        boolean result2 = cll.deleteNode(deleteNum2);
 
         if(result2 == true) {
             System.out.println(String.format("Deleted number %d", deleteNum2));
@@ -162,7 +162,7 @@ public class App
         // delete 
         int deleteNum3 = 10;
         System.out.println(String.format("*** The number to delete is: %d", deleteNum3));
-        Boolean result3 = cll.deleteNode(deleteNum3);
+        boolean result3 = cll.deleteNode(deleteNum3);
 
         if(result3 == true) {
             System.out.println(String.format("Deleted number %d", deleteNum3));
@@ -259,7 +259,7 @@ public class App
         int updateNum2 = 7;
         System.out.println(String.format("*** Update number %d to %d", insertBefore, updateNum2));
 
-        Boolean updateResult3 = cll.update(insertBefore,updateNum2);
+        boolean updateResult3 = cll.update(insertBefore,updateNum2);
 
         if(updateResult3 == false) {
             System.out.println(String.format("Fail to update, number %d is not found in the list", oldValue));
@@ -279,7 +279,7 @@ public class App
         int deleteNum4 = 4;
         System.out.println(String.format("*** The number to delete is: %d", deleteNum4));
 
-        Boolean result4 = cll.deleteNode(deleteNum4);
+        boolean result4 = cll.deleteNode(deleteNum4);
         if(result4 == true) {
             System.out.println(String.format("Deleted number %d", deleteNum4));
         }else{
