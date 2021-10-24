@@ -118,7 +118,7 @@ public class App
         System.out.println();
         int deleteNum = 6;
         System.out.println(String.format("*** The number to delete is: %d", deleteNum));
-        boolean deleteResult = cll.deleteNode(deleteNum);
+        boolean deleteResult = cll.delete(deleteNum);
 
         if(deleteResult == true) {
             System.out.println(String.format("Deleted number %d", deleteNum));
@@ -134,7 +134,7 @@ public class App
         System.out.println();
         int deleteNum2 = 7;
         System.out.println(String.format("*** The number to delete is: %d", deleteNum2));
-        boolean result2 = cll.deleteNode(deleteNum2);
+        boolean result2 = cll.delete(deleteNum2);
 
         if(result2 == true) {
             System.out.println(String.format("Deleted number %d", deleteNum2));
@@ -162,7 +162,7 @@ public class App
         // delete 
         int deleteNum3 = 10;
         System.out.println(String.format("*** The number to delete is: %d", deleteNum3));
-        boolean result3 = cll.deleteNode(deleteNum3);
+        boolean result3 = cll.delete(deleteNum3);
 
         if(result3 == true) {
             System.out.println(String.format("Deleted number %d", deleteNum3));
@@ -279,7 +279,7 @@ public class App
         int deleteNum4 = 4;
         System.out.println(String.format("*** The number to delete is: %d", deleteNum4));
 
-        boolean result4 = cll.deleteNode(deleteNum4);
+        boolean result4 = cll.delete(deleteNum4);
         if(result4 == true) {
             System.out.println(String.format("Deleted number %d", deleteNum4));
         }else{

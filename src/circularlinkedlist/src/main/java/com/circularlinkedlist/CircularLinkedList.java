@@ -84,7 +84,7 @@ public class CircularLinkedList{
     }
 
     // delete
-    public boolean deleteNode(int n) {
+    public boolean delete(int n) {
         Node nodeToDelete = search(n);
         if (nodeToDelete == null) {
             return false;
