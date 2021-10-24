@@ -6,7 +6,7 @@ package com.circularlinkedlist;
 
 /** 
  * Create a circular linked list
- * @author Group ### - SJCC_CIS059
+ * @author Group Trang Lam - Quang Dang - Vinh Nguyen - SJCC_CIS055
  * @version 1.0 - 09/20/2021
  */
 
@@ -18,8 +18,9 @@ public class App
         CircularLinkedList cll = new CircularLinkedList();
 
         System.out.println("---Empty list---");
-        System.out.print("List: ");
+        System.out.print("The list is: ");
         cll.printList();
+        System.out.print("Current element: ");
         cll.printCurrent();
         cll.printSize();
         System.out.println();
