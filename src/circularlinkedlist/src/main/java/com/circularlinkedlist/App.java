@@ -18,7 +18,9 @@ public class App
         CircularLinkedList cll = new CircularLinkedList();
 
         System.out.println("---Empty list---");
+        System.out.print("The list is: ");
         cll.printList();
+        System.out.print("Current element: ");
         cll.printCurrent();
         cll.printSize();
         System.out.println();
