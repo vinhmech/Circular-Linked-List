@@ -18,6 +18,7 @@ public class App
         CircularLinkedList cll = new CircularLinkedList();
 
         System.out.println("---Empty list---");
+        System.out.print("List: ");
         cll.printList();
         cll.printCurrent();
         cll.printSize();
@@ -27,7 +28,7 @@ public class App
         // insert
         int insertNum = 5;
         cll.insertAfterCurrent(insertNum);
-        System.out.println(String.format("*** Inserted number: %d", insertNum ));
+        System.out.println(String.format("*** Inserted number %d after current: ", insertNum ));
         cll.printSize();
         cll.printCurrent();
         System.out.print("List: ");
@@ -45,6 +46,12 @@ public class App
             System.out.println(String.format("Number %d is found.", searchNum));
         }
         System.out.println();
+        cll.printSize();
+        cll.printCurrent();
+        System.out.print("List: ");
+        cll.printList();
+        System.out.println();
+        System.out.println();
 
         int searchNum2 = 5;
         System.out.println(String.format("*** Search number: %d", searchNum2));
@@ -55,18 +62,52 @@ public class App
             System.out.println(String.format("Number %d is found.", searchNum2));
         }
         System.out.println();
+        cll.printSize();
+        cll.printCurrent();
+        System.out.print("List: ");
+        cll.printList();
+        System.out.println();
+        System.out.println();
 
         // update
-        int updateNum = 7;
-        cll.update(insertNum,updateNum);
-        System.out.println(String.format("*** Updated number %d to %d", insertNum, updateNum));
+        int newValue = 7;
+        int oldValue = 6;
+
+        Node numToUpdate = cll.search(oldValue);
+
+        if(numToUpdate == null) {
+            System.out.println(String.format("*** Update: Number %d is not found in the list", oldValue));
+        }else{
+            cll.update(oldValue,newValue);
+            System.out.println(String.format("*** Updated number %d to %d", oldValue, newValue));
+        }
+
         cll.printSize();
         cll.printCurrent();
         System.out.print("List: ");
         cll.printList();
         System.out.println();
 
-        // // delete
+        // update
+        int newValue2 = 7;
+        int oldValue2 = 5;
+
+        Node numToUpdate2 = cll.search(oldValue2);
+
+        if(numToUpdate2 == null) {
+            System.out.println(String.format("*** \nUpdate: Number %d is not found in the list", oldValue2));
+        }else{
+            cll.update(oldValue2,newValue2);
+            System.out.println(String.format("*** \nUpdated number %d to %d", oldValue2, newValue2));
+        }
+
+        cll.printSize();
+        cll.printCurrent();
+        System.out.print("List: ");
+        cll.printList();
+        System.out.println();
+
+        // delete
         System.out.println();
         int deleteNum = 6;
         System.out.println(String.format("*** The number to delete is: %d", deleteNum));
@@ -74,6 +115,22 @@ public class App
 
         if(result == true) {
             System.out.println(String.format("Deleted number %d", deleteNum));
+        }else{
+            System.out.println("The number to delete is not found in the list.");
+        }
+        cll.printSize();
+        cll.printCurrent();
+        System.out.print("List: ");
+        cll.printList();
+        System.out.println();
+
+        System.out.println();
+        int deleteNum2 = 7;
+        System.out.println(String.format("*** The number to delete is: %d", deleteNum2));
+        Boolean result2 = cll.deleteNode(deleteNum2);
+
+        if(result2 == true) {
+            System.out.println(String.format("Deleted number %d", deleteNum2));
         }else{
             System.out.println("The number to delete is not found in the list.");
         }
@@ -180,12 +237,12 @@ public class App
 
         // delete
         System.out.println();
-        int deleteNum2 = 4;
-        System.out.println(String.format("*** The number to delete is: %d", deleteNum2));
+        int deleteNum3 = 4;
+        System.out.println(String.format("*** The number to delete is: %d", deleteNum3));
 
-        Boolean result2 = cll.deleteNode(deleteNum2);
-        if(result2 == true) {
-            System.out.println(String.format("Deleted number %d", deleteNum2));
+        Boolean result3 = cll.deleteNode(deleteNum3);
+        if(result3 == true) {
+            System.out.println(String.format("Deleted number %d", deleteNum3));
         }else{
             System.out.println("The number to delete is not found in the list.");
         }
