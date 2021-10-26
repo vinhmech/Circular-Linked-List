@@ -7,7 +7,7 @@ package com.circularlinkedlist;
 /** 
  * Create a circular linked list
  * @author Group Trang Lam - Quang Dang - Vinh Nguyen - SJCC_CIS055
- * @version 1.0 - 09/20/2021
+ * @version 1.0 - 10/20/2021
  */
 
 
